@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script-->
+        <script src="/static/angular.min.js"></script>
+    </head>
+    <body>
+
+        <div ng-app="myApp" ng-controller="myCtrl">
+        
+            Ligne
+            <select ng-model="line" ng-options="l.name for l in lines | orderBy: 'id'" ng-change="lineChanged()"></select>
+            
+            Arrêt
+            <select ng-show="line" ng-model="stop" ng-options="s.name for s in stops" ng-change="stopChanged()"></select>
+            
+            Direction
+            <select ng-show="line" ng-model="direction" ng-options="d.name for d in directions" ng-change="directionChanged()"></select>
+        
+            <br>
+            <br>
+            Prochains bus: 
+            <ul>
+                <li ng-repeat="x in etas">dans {- x.min -} minutes et {- x.sec -} secondes, à {- x.time -}</li>
+            </ul>
+
+            <span>{- error -}</span>
+
+        </div>
+
+        <script src="static/app.js"></script>
+    </body>
+</html>
