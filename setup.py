@@ -21,7 +21,7 @@ requires = [
     'waitress',
     'requests',
     'bs4',
-    'cornice',
+    'cornice==2.4.0',
 ]
 
 tests_require = [
