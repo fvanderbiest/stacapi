@@ -9,18 +9,18 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
 requires = [
-    'plaster_pastedeploy',
-    'pyramid >= 1.9a',
-    'pyramid_debugtoolbar',
-    'pyramid_jinja2',
-    'pyramid_retry',
-    'pyramid_tm',
-    'SQLAlchemy',
-    'transaction',
-    'zope.sqlalchemy',
-    'waitress',
-    'requests',
-    'bs4',
+    'plaster-pastedeploy==0.4.1',
+    'pyramid==1.9.1',
+    'pyramid-debugtoolbar==4.3',
+    'pyramid-jinja2==2.7',
+    'pyramid-retry==0.5',
+    'pyramid-tm==2.2',
+    'SQLAlchemy==1.1.15',
+    'transaction==2.1.2',
+    'zope.sqlalchemy==0.7.7',
+    'waitress==1.1.0',
+    'requests==2.18.4',
+    'bs4==0.0.1',
     'cornice==2.4.0',
 ]
 
